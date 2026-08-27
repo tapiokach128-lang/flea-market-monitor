@@ -67,11 +67,18 @@ def _find_items(html, link_pattern, price_window=400):
         alt_match = re.findall(r'alt="([^"]{2,80})"', prefix)
         title = alt_match[-1] if alt_match else "(タイトル取得失敗)"
 
+        # サムネイル画像らしきURLを拾う(直前のimg src / data-src)
+        img_match = re.findall(
+            r'(?:src|data-src)="(https://[^"]+\.(?:jpg|jpeg|png|webp)[^"]*)"', prefix
+        )
+        image = img_match[-1] if img_match else None
+
         items[item_id] = {
             "id": item_id,
             "title": title,
             "price": price,
             "url": url,
+            "image": image,
         }
 
     return list(items.values())
