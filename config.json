@@ -1,0 +1,19 @@
+{
+  "discord_webhook_url": "https://discord.com/api/webhooks/1542598655553577030/4jYmtQYRN93pq6qxtRn-lJrALRLVTQdkkr5yM9RdlDY9n-_oxhxJkFlyoJi_QzZDTSIe",
+
+  "keywords": [
+    "Gucci",
+    "Saint Laurent",
+    "UNDERCOVER"
+  ],
+
+  "sites": {
+    "mercari": true,
+    "rakuma": true,
+    "2ndstreet": true,
+    "bookoff": true
+  },
+
+  "max_price": 30000,
+  "max_results_per_keyword": 20
+}
